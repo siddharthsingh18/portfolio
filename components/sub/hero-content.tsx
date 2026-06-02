@@ -4,6 +4,7 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { ProfilePhoto } from "./profile-photo";
 import {
   slideInFromLeft,
   slideInFromRight,
@@ -59,19 +60,7 @@ export const HeroContent = () => {
         </motion.a>
       </div>
 
-      <motion.div
-        variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
-      >
-        <Image
-          src="/hero-bg.svg"
-          alt="AI and development workspace"
-          height={650}
-          width={650}
-          draggable={false}
-          className="select-none"
-        />
-      </motion.div>
+      <ProfilePhoto />
     </motion.div>
   );
 };
